@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap");
+
+@import "@/styles/variables.scss";
+
+// =======================
+// 🔁 CSS Reset / Normalize
+// =======================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+  color: $color-text;
+  font-family: $font-main;
+  font-size: $font-size-base;
+  scroll-behavior: smooth;
+}
+
+// =======================
+// ✨ Background
+// =======================
+
+body {
+  background: radial-gradient(
+    ellipse at top,
+    $color-black 0%,
+    $color-black 100%
+  );
+  overflow-x: hidden;
+}
+
+// =======================
+// 🖋 Headings
+// =======================
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-headline;
+  font-weight: 600;
+  color: $color-text;
+}
+
+// =======================
+// 🔘 Buttons & Links
+// =======================
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  border-radius: $radius;
+  padding: $spacing-sm $spacing-md;
+  background-color: $color-primary;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-accent;
+    box-shadow: 0 0 12px $color-accent;
+  }
+}
+
+// =======================
+// 🖱 Scrollbar (optional)
+// =======================
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-secondary;
+  border-radius: 10px;
+}
+
+//hides scrollbar
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE und Edge */
+  scrollbar-width: none; /* Firefox */
+}
