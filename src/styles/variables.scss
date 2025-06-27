@@ -4,25 +4,32 @@
 
 // 🌌 Galaxy-Theme Farben
 $color-black: #000000;
-$color-bg: #0a0c1b; 
-$color-bg-alt: #111321; 
-$color-surface: #1d2033; 
+$color-bg: #0a0c1b;
+$color-bg-alt: #111321;
+$color-surface: #1d2033;
 
 $color-text: #f2f2f8;
-$color-text-muted: #9ca3af; 
+$color-text-muted: #9ca3af;
 
 $color-primary: #8f00ff;
 $color-secondary: #00c2ff;
-$color-accent: #ff3cac; 
-$color-stars: #ffffff1a; 
+$color-accent: #ff3cac;
+$color-stars: #ffffff1a;
 
 // ===========================
 // 🖋️ Typografie
 // ===========================
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap");
 
-$font-main: "Inter", sans-serif;
-$font-headline: "Orbitron", sans-serif;
+@font-face {
+  font-family: "MainFont";
+  src: url("/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-main: "MainFont", sans-serif;
+$font-headline: "MainFont", sans-serif;
 
 $font-size-base: 16px;
 $font-size-lg: 20px;

@@ -22,12 +22,14 @@ export default function GalaxyScene() {
         height: "100vh",
       }}
     >
+      
+
       <Suspense fallback={null}>
         <ScrollControls pages={3} damping={0.25}>
           <ScrollScene />
         </ScrollControls>
         <Stars
-          radius={250}
+          radius={200}
           depth={50}
           count={30000}
           factor={5}

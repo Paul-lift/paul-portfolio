@@ -43,7 +43,57 @@ export default function SectionText({
   }
 
   useEffect(() => {
-    setTimeout(typeWriter, 600)
+    setTimeout(typeWriter, 600);
+  }, []);
+
+  const [scrollText, setScrollText] = useState("");
+  const [fullscreenText, setFullscreenText] = useState("");
+
+  useEffect(() => {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+    // Scroll Text
+    let iterations1 = 0;
+    const interval1 = setInterval(() => {
+      setScrollText(() =>
+        "Scrolle um mehr über mich zu erfahren"
+          .split("")
+          .map((char, i) => {
+            if (i < iterations1) return char;
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join("")
+      );
+
+      iterations1 += 1 / 3;
+      if (iterations1 >= "Scrolle um mehr über mich zu erfahren".length)
+        clearInterval(interval1);
+    }, 10);
+
+    let iterations2 = 0;
+    const interval2 = setInterval(() => {
+      setFullscreenText(() =>
+        'Drück "f" für ein immersives Fullscreen-Erlebnis'
+          .split("")
+          .map((char, i) => {
+            if (i < iterations2) return char;
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join("")
+      );
+
+      iterations2 += 1 / 3;
+      if (
+        iterations2 >= 'Drück "f" für ein immersives Fullscreen-Erlebnis'.length
+      )
+        clearInterval(interval2);
+    }, 10);
+
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+    };
   }, []);
 
   return (
@@ -67,7 +117,18 @@ export default function SectionText({
         anchorX="center"
         anchorY="middle"
       >
-        Scrolle um mehr über mich zu erfahren
+        {scrollText}
+      </Text>
+
+      <Text
+        font={import.meta.env.BASE_URL + "/fonts/IBMPlexMono-Regular.ttf"}
+        position={[position[0], position[1] - 75, position[2]]}
+        fontSize={15}
+        color="#f2f2f8"
+        anchorX="center"
+        anchorY="middle"
+      >
+        {fullscreenText}
       </Text>
     </>
   );

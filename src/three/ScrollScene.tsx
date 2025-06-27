@@ -3,6 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 import StartPage from "../sections/startPage/startPage";
+import AboutMe from "../sections/aboutMe/aboutMe";
 
 export default function ScrollScene() {
   const scroll = useScroll();
@@ -12,8 +13,18 @@ export default function ScrollScene() {
 
   const curve = new THREE.CatmullRomCurve3([
     new THREE.Vector3(0, 0, 1000), // startPage
-    new THREE.Vector3(0, 0, 100), // startPage
-    
+
+    new THREE.Vector3(-200, 150, 1000), 
+    new THREE.Vector3(-400, 300, 1000), // aboutMe path
+
+    new THREE.Vector3(-600, 300, 500),
+    new THREE.Vector3(-775, 300, -100), // aboutMe
+
+    new THREE.Vector3(-750, 100, -50),
+    new THREE.Vector3(-700, -200, 0),
+    new THREE.Vector3(0, -200, -700),
+    new THREE.Vector3(700, 0, 0),
+    new THREE.Vector3(800, 100, 300), //project path
   ]);
 
   useFrame(() => {
@@ -33,7 +44,11 @@ export default function ScrollScene() {
 
   return (
     <>
-      <StartPage position={[0,0,700]}></StartPage>
+      <StartPage position={[0, 0, 700]}></StartPage>
+      <AboutMe
+        position={[-500, 150, 0]}
+        rotation={[0, Math.PI / -2, 0]}
+      ></AboutMe>
     </>
   );
 }
