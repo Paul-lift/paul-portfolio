@@ -1,8 +1,9 @@
 import { Canvas } from "@react-three/fiber";
-import { Stars, Sparkles } from "@react-three/drei";
+import { Stars, Sparkles, OrbitControls } from "@react-three/drei";
 import { Suspense } from "react";
 import { ScrollControls } from "@react-three/drei";
 import ScrollScene from "./ScrollScene";
+import Planet from "./Planet";
 
 export default function GalaxyScene() {
   const sparkleCount = 3000;
@@ -22,8 +23,6 @@ export default function GalaxyScene() {
         height: "100vh",
       }}
     >
-      
-
       <Suspense fallback={null}>
         <ScrollControls pages={3} damping={0.25}>
           <ScrollScene />
@@ -32,7 +31,7 @@ export default function GalaxyScene() {
           radius={200}
           depth={50}
           count={30000}
-          factor={5}
+          factor={7}
           saturation={1}
           fade
           speed={1}

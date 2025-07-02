@@ -4,6 +4,7 @@ import { useRef } from "react";
 import * as THREE from "three";
 import StartPage from "../sections/startPage/startPage";
 import AboutMe from "../sections/aboutMe/aboutMe";
+import Projects from "../sections/projects/projects";
 
 export default function ScrollScene() {
   const scroll = useScroll();
@@ -14,7 +15,7 @@ export default function ScrollScene() {
   const curve = new THREE.CatmullRomCurve3([
     new THREE.Vector3(0, 0, 1000), // startPage
 
-    new THREE.Vector3(-200, 150, 1000), 
+    new THREE.Vector3(-200, 150, 1000),
     new THREE.Vector3(-400, 300, 1000), // aboutMe path
 
     new THREE.Vector3(-600, 300, 500),
@@ -49,6 +50,7 @@ export default function ScrollScene() {
         position={[-500, 150, 0]}
         rotation={[0, Math.PI / -2, 0]}
       ></AboutMe>
+      <Projects position={[0, 0, 0]} rotation={[0, 0, 0]}></Projects>
     </>
   );
 }

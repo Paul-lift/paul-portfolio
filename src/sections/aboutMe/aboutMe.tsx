@@ -14,7 +14,7 @@ export default function AboutMe({ position, rotation = [0, 0, 0] }: Props) {
         position={[position[0], position[1] + 175, position[2] - 55]}    
         fontSize={35}
         color="#f2f2f8"
-        anchorX="right"
+        anchorX="right" 
         anchorY="top-baseline"
         rotation={rotation}
       >

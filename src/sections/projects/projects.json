@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Basissemester - Team Minions",
+    "position": [0, 0, 0],
+    "model": "models/earth.glb",
+    "scale": [2, 2, 2],
+    "description": "Grundlagen in HTML, CSS, JavaScript und Angular. Erste Erfahrungen mit Scrum gesammelt",
+    "projectProvider": "Fasanella Margherita",
+    "date": "12.08.2024 - 31.01.2025"
+  },
+  {
+    "id": 2,
+    "name": "Learning Leader - CodemiX2",
+    "position": [100, 0, -100],
+    "model": "models/mars.glb",
+    "scale": [1.5, 1.5, 1.5],
+    "description": "Betreuung und Unterstützung von Erstjahrlernenden in der Applikationsentwicklung (HTML, CSS, JavaScript, TypeScript, React, Java, Spring Boot), Vermittlung von Fachwissen und Begleitung bei Projektarbeiten.",
+    "projectProvider": "Georgokitsos Dimosthenis",
+    "date": "03.02.2025 - 31.07.2025"
+  }
+]

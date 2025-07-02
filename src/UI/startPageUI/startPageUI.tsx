@@ -13,9 +13,9 @@ export default function StartPageUI() {
           padding: "10px 20px",
         }}
       >
-        <DecodeText text="Paul" speed={30} />
+        <DecodeText text="Paul" speed={100} />
         <br />
-        <DecodeText text="Bot" speed={30} />
+        <DecodeText text="Bot" speed={100} />
       </h3>
     </>
   );
